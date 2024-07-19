@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Eléctricos</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: white; /* Fondo blanco */
+            color: rgb(0, 0, 0); 
+            text-align: left; /* Alineado todo a la izquierda */
+            padding: 20px; /* Añadido padding para espacio */
+            position: relative; /* Para posicionar el enlace de regreso */
+            margin-bottom: 100px; /* Espacio en la parte inferior para el bloque de información */
+        }
+        .header {
+            text-align: center; /* Centrar el texto */
+            margin-bottom: 20px; /* Margen inferior */
+        }
+        .header h3 {
+            font-size: 1.8em; /* Tamaño del título */
+            font-weight: bold; /* Negrita */
+            margin: 0; /* Eliminar margen interior */
+        }
+        .header p {
+            font-size: 1.2em; /* Tamaño del texto */
+        }
+        .product-container {
+            display: flex;
+            flex-direction: column; /* Cambiado a columna para poner productos arriba */
+            align-items: flex-start; /* Alineado a la izquierda */
+            margin-top: 40px; /* Aumentado el margen superior */
+            position: relative; /* Añadido para posicionamiento relativo */
+        }
+        .product {
+            text-align: left; /* Alineado a la izquierda */
+            margin-bottom: 20px;
+            display: flex; /* Usamos flexbox para alinear imagen y texto */
+            align-items: center; /* Alineamos verticalmente */
+            position: relative; /* Posicionamiento relativo para alinear texto sobre la imagen */
+        }
+        .product-img {
+            width: 300px; /* Tamaño de la imagen */
+            height: 300px; /* Tamaño de la imagen */
+            border-radius: 8px;
+            margin-right: 20px; /* Espacio entre imagen y texto */
+            border: 2px solid black; /* Borde negro */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); /* Sombra con 90% de opacidad */
+            transition: transform 0.3s ease-out; /* Transición suave en la transformación */
+        }
+        .product:hover .product-img {
+            transform: translateY(-20px); /* Aumentamos la elevación al pasar el mouse */
+        }
+        .product-info {
+            position: absolute;
+            top: 20px; /* Posicionamos desde la parte superior */
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center; /* Centrado del texto */
+            opacity: 0; /* Inicialmente invisible */
+            transition: opacity 0.3s ease-out; /* Transición de opacidad */
+            width: 80%; /* Ancho del contenedor */
+            max-width: 800px; /* Ancho máximo */
+        }
+        .product:hover .product-info {
+            opacity: 1; /* Mostrar al pasar el mouse */
+        }
+        .corner-image {
+            position: absolute;
+            top: 135px; /* Ajuste para desplazar la imagen hacia abajo */
+            right: 20px;
+            width: 300px; /* Tamaño de la imagen */
+            height: 300px; /* Tamaño de la imagen */
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); /* Sombra con 90% de opacidad */
+            transition: transform 0.3s ease-out; /* Transición suave en la transformación */
+        }
+        .contact-info {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+        .contact-info h4 {
+            margin-top: 0;
+            font-size: 1.2em;
+            text-align: center;
+        }
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .contact-info ul li {
+            margin-bottom: 5px;
+        }
+        .return-button {
+            background-color: green; /* Fondo verde */
+            color: white; /* Texto blanco */
+            font-size: 0.8em; /* Tamaño de fuente */
+            padding: 10px 15px; /* Padding del botón */
+            border-radius: 8px; /* Bordes redondeados */
+            position: absolute; /* Posición absoluta */
+            top: 20px; /* Posicionado más arriba */
+            right: 20px; /* Alineado a la derecha */
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+        @keyframes pulseLink {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor para la información centrada -->
+    <div class="header">
+        <h3>TUPER gran fabricante de herramientas manuales, eléctricas y artículos</h3>
+        <p>Como espátulas, lijas navajas, discos, cuters, flexómetros, rodillos y brochas ETC......</p>
+    </div>
+
+    <!-- Contenedor de productos -->
+    <div class="product-container">
+        <!-- Producto 1 -->
+        <div class="product">
+            <img class="product-img" src="juego de 211.png" alt="Imagen del Producto 1">
+            <div class="product-info">
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product">
+            <img class="product-img" src="juego de llaves .png" alt="Imagen del Producto 2">
+            <div class="product-info">
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product">
+            <img class="product-img" src="achas.png" alt="Imagen del Producto 3">
+            <div class="product-info">
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Nuevo Producto -->
+        <div class="product">
+            <img class="product-img" src="maquinas.png" alt="Imagen del Nuevo Producto">
+            <div class="product-info">
+                <h3></h3>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Imagen en la esquina superior derecha con margen -->
+    <img class="corner-image" src="truper.png" alt="Imagen en la esquina superior derecha">
+
+    <!-- Botón de regresar más pequeño -->
+    <a href="proyecto.html" class="return-button">Regresar a la página principal</a>
+
+    <!-- Bloque de información de contacto -->
+    <div class="contact-info">
+        <h4>Información de contacto</h4>
+        <ul>
+            <li><strong>WhatsApp:</strong> 722 572 5063, 722 330 0358</li>
+            <li><strong>Correo electrónico:  delectoluca00@hotmail.com     </strong> </li>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
+
