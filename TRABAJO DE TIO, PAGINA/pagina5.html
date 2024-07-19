@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos Eléctricos</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: white; /* Fondo blanco */
+            color: rgb(0, 0, 0); 
+            text-align: left; /* Alineado todo a la izquierda */
+            padding: 20px; /* Añadido padding para espacio */
+            position: relative; /* Para posicionar el enlace de regreso */
+        }
+        p {
+            font-size: 1.2em;
+            animation: fadeIn 1s ease-out; /* Animación de entrada para párrafos */
+        }
+        .product-container {
+            display: flex;
+            flex-direction: column; /* Cambiado a columna para poner productos arriba */
+            align-items: flex-start; /* Alineado a la izquierda */
+            margin-top: 20px;
+        }
+        .product {
+            text-align: left; /* Alineado a la izquierda */
+            margin-bottom: 20px;
+            display: flex; /* Usamos flexbox para alinear imagen y texto */
+            align-items: center; /* Alineamos verticalmente */
+            animation: slideIn 1s ease-out; /* Animación de entrada para cada producto */
+        }
+        .product-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 8px;
+            margin-right: 20px; /* Espacio entre imagen y texto */
+            border: 2px solid black; /* Borde negro */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9); /* Sombra con 90% de opacidad */
+            transition: transform 0.3s ease-out; /* Transición suave en la transformación */
+        }
+        .product:hover .product-img {
+            transform: translateY(-20px); /* Aumentamos la elevación al pasar el mouse */
+        }
+        .product-info {
+            flex: 1; /* El texto ocupa todo el espacio restante */
+            animation: fadeIn 1s ease-out; /* Animación de entrada para la información del producto */
+            transition: transform 0.3s ease-out; /* Transición suave en la transformación */
+        }
+        .product:hover .product-info {
+            transform: translateY(-10px); /* Alzamiento más pronunciado al pasar el mouse */
+        }
+        a { 
+            color: rgb(3, 132, 174); 
+            display: inline-block; 
+            margin-top: 20px;
+            animation: pulseLink 1s infinite alternate; /* Animación para el enlace */
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            background-color: rgb(20, 222, 33); /* Fondo verde */
+            padding: 10px 20px; /* Espacio interno */
+            border-radius: 5px; /* Bordes redondeados */
+            text-decoration: none; /* Quitar subrayado del enlace */
+            color: #fff; /* Color de texto blanco */
+        }
+
+        /* Estilo para el bloque de información de contacto */
+        .contact-info {
+            position: fixed; /* Posición fija para mantenerlo en la misma ubicación al hacer scroll */
+            bottom: 20px; /* Distancia desde la parte inferior */
+            right: 20px; /* Distancia desde el borde derecho */
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+            color: white; /* Texto en blanco */
+            padding: 15px; /* Espaciado interno */
+            border-radius: 5px; /* Bordes redondeados */
+            width: 250px; /* Ancho del bloque de información */
+            font-size: 0.9em; /* Tamaño de fuente */
+        }
+
+        .contact-info h4 {
+            margin-top: 0; /* Eliminar margen superior del título */
+            font-size: 1.1em; /* Tamaño de fuente del título */
+        }
+
+        .contact-info ul {
+            list-style-type: none; /* Quitar viñetas de la lista */
+            padding: 0; /* Eliminar padding de la lista */
+        }
+
+        .contact-info ul li {
+            margin-bottom: 5px; /* Espacio entre elementos de la lista */
+        }
+
+        /* Definición de animaciones */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes pulseLink {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <!-- Producto 1 -->
+        <div class="product">
+            <img class="product-img" src="cable1.webp" alt="Imagen del Producto 1" width="300" height="300">
+            <div class="product-info">
+                <h3>Cables THW</h3>
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product">
+            <img class="product-img" src="CABLE2.png" alt="Imagen del Producto 2" width="300" height="300">
+            <div class="product-info">
+                <h3>Cables XLP</h3>
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product">
+            <img class="product-img" src="cable de uso rudo.png" alt="Imagen del Producto 3" width="300" height="300">
+            <div class="product-info">
+                <h3>Cables de uso rudo</h3>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bloque de información de contacto -->
+    <div class="contact-info">
+        <h3>Información de contacto</h3s>
+        <p>Para más información, contáctanos:</p>
+        <ul>
+          <h4> <li><strong>WhatsApp:</strong> 722 572 5063, 722 330 0358</li></h4> 
+           <h4 > <li><strong>Correo electrónico:</strong> delectoluca00@hotmail.com </li></h4> 
+        </ul>
+    </div>
+
+    <!-- Enlace para regresar -->
+    <a href="proyecto.html">Regresar a la página principal</a>
+
+    <!-- Scripts de animación (puedes eliminar si no los necesitas) -->
+    <script>
+        // Puedes añadir scripts aquí si los necesitas
+    </script>
+</body>
+</html>
