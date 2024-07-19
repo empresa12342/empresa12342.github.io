@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interruptor Automático</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: white; /* Fondo blanco */
+            color: rgb(0, 0, 0); 
+            text-align: left; /* Alineado todo a la izquierda */
+            padding: 20px; /* Añadido padding para espacio */
+            position: relative; /* Establecer posición relativa para el body */
+        }
+        p {
+            font-size: 1.2em;
+            animation: fadeIn 1s ease-out; /* Animación de entrada para párrafos */
+        }
+        .artist-container {
+            display: flex;
+            flex-direction: column; /* Cambiado a columna para poner Artista 1 arriba */
+            align-items: flex-start; /* Alineado a la izquierda */
+            margin-top: 20px;
+        }
+        .artist {
+            text-align: left; /* Alineado a la izquierda */
+            margin-bottom: 20px;
+            display: flex; /* Usamos flexbox para alinear imagen y texto */
+            align-items: center; /* Alineamos verticalmente */
+            animation: slideIn 1s ease-out; /* Animación de entrada para cada artista */
+        }
+        .artist-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 8px;
+            margin-right: 20px; /* Espacio entre imagen y texto */
+            border: 2px solid black; /* Borde negro */
+            transition: transform 0.3s ease-out; /* Transición suave en la transformación */
+        }
+        .artist:hover .artist-img {
+            transform: translateY(-20px); /* Alzamiento más pronunciado al pasar el mouse */
+        }
+        .artist-info {
+            flex: 1; /* El texto ocupa todo el espacio restante */
+            animation: fadeIn 1s ease-out; /* Animación de entrada para la información del artista */
+            transition: transform 0.3s ease-out; /* Transición suave en la transformación */
+        }
+        .artist:hover .artist-info {
+            transform: translateY(-20px); /* Alzamiento más pronunciado al pasar el mouse */
+        }
+        a { 
+            color: rgb(255, 255, 255); /* Texto en blanco */
+            display: inline-block; 
+            margin-top: 20px;
+            padding: 15px 30px; /* Padding interno aumentado */
+            background-color: rgb(17, 177, 17); /* Fondo verde */
+            border-radius: 5px; /* Bordes redondeados */
+            position: absolute; /* Posición absoluta */
+            top: 40px; /* Distancia desde arriba */
+            right: 40px; /* Distancia desde la derecha */
+            text-decoration: none; /* Sin subrayado */
+            transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+            font-size: 1.2em; /* Tamaño de fuente aumentado */
+        }
+        a:hover {
+            background-color: darkgreen; /* Color de fondo más oscuro al pasar el mouse */
+            transform: scale(1.1); /* Escala aumentada al pasar el mouse */
+        }
+
+        /* Estilos para el bloque de información de contacto */
+        .contact-info {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .contact-info h4 {
+            margin-top: 0;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-info ul li {
+            margin-bottom: 5px;
+        }
+
+        /* Definición de animaciones */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="artist-container">
+        <!-- Artista 1 -->
+        <div class="artist">
+            <img class="artist-img" src="interruptor-automatico-5sl4-10ka-curva-d-3-polos-6a-70mm-800x800.jpg" alt="Imagen del Artista 1" width="300" height="300">
+            <div class="artist-info">
+                <h3>  interruptores industriales de 1,2,3 polos, desde 2A hasta 1200A, para riel din y gabinete                                                                        </h3>
+                <p> </p>
+            </div>
+        </div>
+
+        <!-- Artista 2 -->
+        <div class="artist">
+            <img class="artist-img" src="image2pagina1.png" alt="Imagen del Artista 2" width="300" height="300">
+            <div class="artist-info">
+                <h3>    relevadores bimetalicos tam 00,0,1,2,3                                                                       </h3>
+                <p></p>
+            </div>
+        </div>
+
+         <!-- Artista 3 -->
+         <div class="artist">
+            <img class="artist-img" src="contactores .png" alt="Imagen del Artista 2" width="300" height="300">
+            <div class="artist-info">
+                <h3>    contactores auxiliares, contactores de potencia,en voltajes de CA y CD, varias capacidades                                                                       </h3>
+                <p> </p>
+            </div>
+        </div>
+
+        <!-- Nuevo Artista -->
+        <div class="artist">
+            <img class="artist-img" src="imagen 4.png" alt="Imagen del Nuevo Artista" width="300" height="300">
+            <div class="artist-info">
+                <h3>          guarda motores para la proteccion de sus motores trifasicos                                                                 </h3>
+                <p> </p>
+            </div>
+        </div>
+    </div>
+
+    <a href="proyecto.html">Regresar a la página principal</a>
+
+    <!-- Bloque de información de contacto -->
+    <div class="contact-info">
+        <h4>Información de contacto</h4>
+        <h3>Para más información y más productos contactar a:</h3>
+        <ul>
+           <h4> <li><strong>WhatsApp:</strong> +722 572 5063, 722 330 0358</li></h4>
+           <h4>  <li><strong>Correo electrónico:</strong> delectoluca00@hotmail.com </li></h4>
+        </ul>
+    </div>
+</body>
+</html>
+
+
+
